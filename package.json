@@ -1,16 +1,28 @@
 {
   "name": "google-parser",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "구글에서 이미지, 일반 검색결과를 가져옵니다.",
-  "main": "index.js",
+  "main": "google_parser.js",
   "scripts": {
-    "test": "node ./test.js"
+    "test": "node ./test.js --trace-sync-io"
   },
-  "author": "trusty_people",
+  "author": "trusty_people <jioo0224@naver.com>",
   "license": "MIT",
   "dependencies": {
     "dom-parser": "^0.1.5",
     "google": "^2.1.0",
     "request": "^2.81.0"
-  }
+  },
+  "keywords": [
+    "google", "google search", "google serach without api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trustypeople/google-parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/trustypeople/google-parser/issues"
+  },
+  "homepage": "https://github.com/trustypeople/google-parser#readme"
+  
 }
