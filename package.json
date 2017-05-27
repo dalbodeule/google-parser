@@ -1,0 +1,16 @@
+{
+  "name": "google-parser",
+  "version": "1.0.0",
+  "description": "구글에서 이미지, 일반 검색결과를 가져옵니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test.js"
+  },
+  "author": "trusty_people",
+  "license": "MIT",
+  "dependencies": {
+    "dom-parser": "^0.1.5",
+    "google": "^2.1.0",
+    "request": "^2.81.0"
+  }
+}
