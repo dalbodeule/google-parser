@@ -30,7 +30,7 @@ module.exports.search = (search) => {
                 result.push({title: now.title, link: now.href, description: now.description});
             }
             for(let i in result) {
-                if(result[i].title.match(/Images for.*/) != null) {
+                if(result[i].title.match(/.*for.*-ilbe.com/) != null) {
                     result.splice(i, 1);
                 }
             }
