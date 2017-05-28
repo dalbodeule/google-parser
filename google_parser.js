@@ -29,6 +29,11 @@ module.exports.search = (search) => {
                 let now = res.links[i];
                 result.push({title: now.title, link: now.href, description: now.description});
             }
+            for(let i in result) {
+                if(result[i].title.match(/Images for.*/) != null) {
+                    result.splice(i, 1);
+                }
+            }
             resolve(result);
         });
     });
