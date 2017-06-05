@@ -53,6 +53,9 @@ module.exports.search = (search) => {
                 if(result[i].title.match(/.*for.*-ilbe.com/) != null) {
                     result.splice(i, 1);
                 }
+                if(result[i].title == '') {
+                    result.splice(i, 1);
+                }
             }
             resolve(result);
         });
