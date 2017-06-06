@@ -50,7 +50,7 @@ module.exports.search = (search) => {
                 result.push({title: now.title, link: now.href, description: now.description});
             }
             for(let i in result) {
-                if(result[i].title.match(/.*for.*-ilbe.com/) != null) {
+                if(result[i].title.match(/images for .*/gi) != null) {
                     result.splice(i, 1);
                 }
                 if(result[i].title == '') {
