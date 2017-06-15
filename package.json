@@ -1,12 +1,12 @@
 {
   "name": "google-parser",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "구글에서 이미지, 일반 검색결과를 가져옵니다.",
   "main": "google_parser.js",
   "scripts": {
     "test": "node ./test.js --trace-sync-io"
   },
-  "author": "trusty_people <jioo0224@naver.com>",
+  "author": "small_sunshine <jioo0224@naver.com>",
   "license": "MIT",
   "dependencies": {
     "dom-parser": "^0.1.5",
@@ -18,11 +18,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/trustypeople/google-parser.git"
+    "url": "https://github.com/small-sunshines/google-parser.git"
   },
   "bugs": {
-    "url": "https://github.com/trustypeople/google-parser/issues"
+    "url": "https://github.com/small-sunshines/google-parser/issues"
   },
-  "homepage": "https://github.com/trustypeople/google-parser#readme"
+  "homepage": "https://github.com/small-sunshines/google-parser#readme"
   
 }
