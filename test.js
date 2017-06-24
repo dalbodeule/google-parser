@@ -1,6 +1,6 @@
 const google = require('./google_parser.js');
 
-google.search('Chitanda Eru')
+google.search('쿠로네코')
 .then((res) => {
     console.log(res);
 }).catch((err) => {
