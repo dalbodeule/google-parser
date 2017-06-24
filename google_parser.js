@@ -50,7 +50,7 @@ module.exports.search = (search) => {
                 result.push({title: now.title, link: now.href, description: now.description});
             }
             for(let i in result) {
-                if(result[i].title.match(/images for .*/gi) != null) {
+                if(result[i].title.match(/^(?:images|news) for .*$/gi) != null) {
                     result.splice(i, 1);
                 }
                 if(result[i].title == null || result[i].url == null) {
