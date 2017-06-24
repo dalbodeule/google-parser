@@ -47,12 +47,10 @@ module.exports.search = (search) => {
             let result = new Array();
             for(let i = 0; i < res.links.length; ++i) {
                 let now = res.links[i];
-                result.push({title: now.title, link: now.href, description: now.description});
-            }
-            for(let i in result) {
-                if(result[i].title == null || result[i].link == null) {
-                    result.splice(i, 1);
-                }
+                console.log(now)
+                if(!(!now.title|| !now.href)) {
+                    result.push({title: now.title, link: now.href, description: now.description});
+                } 
             }
             resolve(result);
         });

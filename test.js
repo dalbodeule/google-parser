@@ -1,6 +1,6 @@
 const google = require('./google_parser.js');
 
-google.search('쿠로네코')
+google.search('사카마치 쿠레하')
 .then((res) => {
     console.log(res);
 }).catch((err) => {
