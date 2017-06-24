@@ -52,8 +52,7 @@ module.exports.search = (search) => {
             for(let i in result) {
                 if(result[i].title.match(/^(?:images|news) for .*$/gi) != null) {
                     result.splice(i, 1);
-                }
-                if(result[i].title == null || result[i].url == null) {
+                } else if(result[i].title == null || result[i].url == null) {
                     result.splice(i, 1);
                 }
             }
