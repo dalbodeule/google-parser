@@ -47,7 +47,6 @@ module.exports.search = (search) => {
             let result = new Array();
             for(let i = 0; i < res.links.length; ++i) {
                 let now = res.links[i];
-                console.log(now)
                 if(!(!now.title|| !now.href)) {
                     result.push({title: now.title, link: now.href, description: now.description});
                 } 
