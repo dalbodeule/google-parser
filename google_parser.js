@@ -53,7 +53,7 @@ module.exports.search = (search) => {
                 if(result[i].title.match(/images for .*/gi) != null) {
                     result.splice(i, 1);
                 }
-                if(result[i].title == '') {
+                if(result[i].title == null || result[i].url == null) {
                     result.splice(i, 1);
                 }
             }
