@@ -1,9 +1,14 @@
 const request = require('request'), DomParser = require('dom-parser'), parser = new DomParser(), google = require('google');
 
+/**
+ * 이미지 검색 함수입니다.
+ * @param {string} search - Google 에 검색할 검색어입니다.
+ * @return {Promise<Response>} - 응답 데이터가 넘어옵니다.
+ */
 module.exports.img = (search) => {
     return new Promise((resolve, reject) => {
         request({
-            url: "https://www.google.com/search?q="+encodeURIComponent(search+' -ilbe.com')+"&tbm=isch&ie=UTF-8",
+            url: "https://www.google.com/search?q="+encodeURIComponent(search)+"&tbm=isch&ie=UTF-8",
             headers: {
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36"
             }
@@ -20,10 +25,16 @@ module.exports.img = (search) => {
         });
     });
 }
+
+/**
+ * JPG 이미지 검색 함수입니다.
+ * @param {string} search - Google 에 검색할 검색어입니다.
+ * @return {Promise<Response>} - 응답 데이터가 넘어옵니다.
+ */
 module.exports.jpg = (search) => {
     return new Promise((resolve, reject) => {
         request({
-            url: "https://www.google.com/search?q="+encodeURIComponent(search+' -ilbe.com')+"&tbm=isch&ie=UTF-8&tbs=ift:jpg",
+            url: "https://www.google.com/search?q="+encodeURIComponent(search)+"&tbm=isch&ie=UTF-8&tbs=ift:jpg",
             headers: {
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36"
             }
@@ -40,9 +51,15 @@ module.exports.jpg = (search) => {
         });
     });
 }
+
+/**
+ * 통합검색 함수입니다. 이미지나 뉴스 등의 검색결과는 반환하지 않습니다.
+ * @param {string} search - Google 에 검색할 검색어입니다.
+ * @return {Promise<Response>} - 응답 데이터가 넘어옵니다.
+ */
 module.exports.search = (search) => {
     return new Promise((resolve, reject) => {
-        google(search+' -ilbe.com', (err, res) => {
+        google(search, (err, res) => {
             if(err) reject(err);
             let result = new Array();
             for(let i = 0; i < res.links.length; ++i) {
