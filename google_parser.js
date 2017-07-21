@@ -1,4 +1,4 @@
-const request = require('request'), DomParser = require('dom-parser'), parser = new DomParser(), google = require('google');
+const request = require('request'), DomParser = require('dom-parser'), parser = new DomParser();
 
 /**
  * 이미지 검색 함수입니다.
@@ -59,6 +59,8 @@ module.exports.jpg = (search) => {
  */
 module.exports.search = (search) => {
     return new Promise((resolve, reject) => {
+        const google = require('google');
+        google.resultsPerPage = 100;
         google(search, (err, res) => {
             if(err) reject(err);
             let result = [];
