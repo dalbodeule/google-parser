@@ -16,7 +16,7 @@ module.exports.img = (search) => {
             if(err) reject(err);
             let dom = parser.parseFromString(body);
             let list = dom.getElementsByClassName('rg_meta');
-            let result = new Array();
+            let result = [];
             list.forEach((cur) => {
                 let json = JSON.parse(cur.innerHTML);
                 result.push({img: json.ou, url: json.ru});
@@ -42,7 +42,7 @@ module.exports.jpg = (search) => {
             if(err) reject(err);
             let dom = parser.parseFromString(body);
             let list = dom.getElementsByClassName('rg_meta');
-            let result = new Array();
+            let result = [];
             list.forEach((cur) => {
                 let json = JSON.parse(cur.innerHTML);
                 result.push({img: json.ou, url: json.ru});
@@ -61,7 +61,7 @@ module.exports.search = (search) => {
     return new Promise((resolve, reject) => {
         google(search, (err, res) => {
             if(err) reject(err);
-            let result = new Array();
+            let result = [];
             for(let i = 0; i < res.links.length; ++i) {
                 let now = res.links[i];
                 if(!(!now.title|| !now.href)) {
