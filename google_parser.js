@@ -35,9 +35,6 @@ module.exports.jpg = (search) => {
     return new Promise((resolve, reject) => {
         request({
             url: "https://www.google.com/search?q="+encodeURIComponent(search)+"&tbm=isch&ie=UTF-8&tbs=ift:jpg",
-            headers: {
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36"
-            }
         }, (err, res, body) => {
             if(err) reject(err);
             let dom = parser.parseFromString(body);
@@ -58,19 +55,28 @@ module.exports.jpg = (search) => {
  * @return {Promise<Response>} - 응답 데이터가 넘어옵니다.
  */
 module.exports.search = (search) => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {        
         const google = require('google');
         google.resultsPerPage = 100;
         google(search, (err, res) => {
-            if(err) reject(err);
-            let result = [];
-            for(let i = 0; i < res.links.length; ++i) {
-                let now = res.links[i];
-                if(!(!now.title|| !now.href)) {
-                    result.push({title: now.title, link: now.href, description: now.description});
-                } 
+            if(err) {
+                if(err.message.match(/To continue, please type the characters below\:/) != '') {
+                    reject(Error('Search is not possible'));
+                } else {
+                    reject(err);
+                }
+            } 
+            else if(res.links == null) reject(Error('Search is not possible'));
+            else {
+                let result = [];
+                for(let i = 0; i < res.links.length; ++i) {
+                    let now = res.links[i];
+                    if(!(!now.title|| !now.href)) {
+                        result.push({title: now.title, link: now.href, description: now.description});
+                    } 
+                }
+                resolve(result);
             }
-            resolve(result);
         });
     });
 }

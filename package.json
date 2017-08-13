@@ -1,6 +1,6 @@
 {
   "name": "google-parser",
-  "version": "1.1.15",
+  "version": "1.1.16",
   "description": "구글에서 이미지, 일반 검색결과를 가져옵니다.",
   "main": "google_parser.js",
   "scripts": {
@@ -14,7 +14,9 @@
     "request": "^2.81.0"
   },
   "keywords": [
-    "google", "google search", "google serach without api"
+    "google",
+    "google search",
+    "google serach without api"
   ],
   "repository": {
     "type": "git",
@@ -24,5 +26,4 @@
     "url": "https://github.com/small-sunshines/google-parser/issues"
   },
   "homepage": "https://github.com/small-sunshines/google-parser#readme"
-  
 }

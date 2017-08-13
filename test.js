@@ -1,8 +1,8 @@
 const google = require('./google_parser.js');
 
-google.search('사카마치 쿠레하')
+google.search('kirino')
 .then((res) => {
-    console.log(res);
+    console.log(res[0]);
 }).catch((err) => {
     console.log(err);
 });
