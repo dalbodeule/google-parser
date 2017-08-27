@@ -61,12 +61,12 @@ module.exports.search = (search) => {
         google(search, (err, res) => {
             if(err) {
                 if(err.message.match(/To continue, please type the characters below\:/) != '') {
-                    reject(Error('Search is not possible'));
+                    resolve(false);
                 } else {
                     reject(err);
                 }
             } 
-            else if(res.links == null) reject(Error('Search is not possible'));
+            else if(res.links == null) resolve(false);
             else {
                 let result = [];
                 for(let i = 0; i < res.links.length; ++i) {
