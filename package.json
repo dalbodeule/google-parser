@@ -1,6 +1,6 @@
 {
   "name": "google-parser",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "구글에서 이미지, 일반 검색결과를 가져옵니다.",
   "main": "google_parser.js",
   "scripts": {
