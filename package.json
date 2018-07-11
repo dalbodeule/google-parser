@@ -1,6 +1,6 @@
 {
   "name": "google-parser",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "구글에서 이미지, 일반 검색결과를 가져옵니다.",
   "main": "google_parser.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "dependencies": {
     "dom-parser": "^0.1.5",
     "google": "^2.1.0",
-    "request": "^2.81.0"
+    "request": "^2.83.0"
   },
   "keywords": [
     "google",
@@ -20,10 +20,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/small-sunshines/google-parser.git"
+    "url": "https://git.mori.space/small-sunshine/google-parser.git"
   },
   "bugs": {
-    "url": "https://github.com/small-sunshines/google-parser/issues"
+    "url": "https://git.mori.space/small-sunshine/google-parser/issues"
   },
-  "homepage": "https://github.com/small-sunshines/google-parser#readme"
+  "homepage": "https://git.mori.space/small-sunshine/google-parser/#readme"
 }
