@@ -1,4 +1,4 @@
-const google = require('./google_parser.js');
+const google = require('./index.js');
 
 google.search('kirino')
 .then((res) => {
@@ -6,13 +6,13 @@ google.search('kirino')
 }).catch((err) => {
     console.log(err);
 });
-google.img('너의 이름은. Another Side: Earthbound')
+google.img('君の名は。 Another Side: Earthbound')
 .then((res) => {
     console.log(res[0]);
 }).catch((err) => {
     console.log(err);
 });
-google.jpg('너의 이름은. Another Side: Earthbound')
+google.jpg('君の名は。 Another Side: Earthbound')
 .then((res) => {
     console.log(res[0]);
 }).catch((err) => {
