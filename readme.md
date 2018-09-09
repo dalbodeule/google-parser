@@ -27,7 +27,5 @@ This module documented with jsdoc. You can find a detailed description.
  
 Recommends testing the json return value to check the json format.
  
-`google-parse.search()` function returns `false` if the library can't search because of Google's anti bot policy.
- 
 ## Developer
 볕뉘(small_sunshine)[npmjs](https://www.npmjs.com/~trusty_people) [github](https://github.com/small_sunshines)
