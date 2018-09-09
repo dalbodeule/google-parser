@@ -1,6 +1,6 @@
 {
   "name": "google-parser",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Get images, general search results from Google.",
   "main": "index",
   "scripts": {
@@ -25,5 +25,6 @@
   "bugs": {
     "url": "https://git.mori.space/small-sunshine/google-parser/issues"
   },
-  "homepage": "https://git.mori.space/small-sunshine/google-parser/#readme"
+  "homepage": "https://git.mori.space/small-sunshine/google-parser/#readme",
+  "types": "./types/google-parser.d.ts"
 }
