@@ -1,20 +1,24 @@
 declare module 'google-parser' {
 	function img (search: string):
-		Promise<Array<imgReturn>>
+		Promise<imgReturn>
 	function jpg (search: string):
-		Promise<Array<imgReturn>>
+		Promise<imgReturn>
 	function search (string: string):
-		Promise<Array<searchReturn>|error>
+		Promise<searchReturn|error>
 
 	interface imgReturn {
-		img: string,
-		url: string
+		[index: number]: {
+			img: string,
+			url: string
+		}
 	}
 	
 	interface searchReturn {
-		title: string,
-		link: string,
-		description: string
+		[index: number]: {
+			title: string,
+			link: string,
+			description: string
+		}
 	}
 
 	interface error {
