@@ -10,22 +10,57 @@
 MIT
 
 ## 모듈 로드
-
+ 
+javascript
 ```javascript
 let google = require('google-parser');
 ```
 
-## callback 방식
+typescript
+```typescript
+import * as google from 'google-parser'
+```
 
-본 모듈은 `callback` 호출을 지원하지 않습니다. 번거롭더라도 `promise` 나 `async/await` 패턴을 이용해주시기 바랍니다.
+## 작동방식
 
-## promise 방식, async/await 방식
+본 모듈은 Promise 및 async/await만 지원합니다.
 
-jsdoc 가 적용되어있습니다. 상세한 설명이 나타나므로 참고해주시기 바랍니다.
+## 함수목록
+
+```typescript
+google.img(search: string): Promise<ImageResponse>
+
+google.jpg(search: string): Promise<ImageResponse>
+
+google.google(search: string): Promise<serachResponse|error>
+```
+
+## 타입
+```typescript
+interface imgReturn {
+	[index: number]: {
+		img: string,
+		url: string
+    }
+}
+	
+interface searchReturn {
+    [index: number]: {
+        title: string,
+        link: string,
+        description: string
+    }
+}
+
+interface error {
+    error: true,
+    reson: string
+}
+```
 
 ## 반환
 
-반환은 json 으로 처리되며 테스트를 해보시면서 작동시켜보시는 것을 권장드립니다.
+반환은 object로 처리됩니다. 위의 type을 참조하시기 바랍니다.
 
 ## 제작자
 볕뉘(small_sunshine)[npmjs](https://www.npmjs.com/~trusty_people) [github](https://github.com/small_sunshines)

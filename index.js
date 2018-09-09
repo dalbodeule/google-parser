@@ -55,7 +55,7 @@ module.exports.jpg = (search) => {
 /**
  * 통합검색 함수입니다. 이미지나 뉴스 등의 검색결과는 반환하지 않습니다.
  * @param {string} search - Google 에 검색할 검색어입니다.
- * @return {Promise<Response|string>} - 응답 데이터가 넘어옵니다.
+ * @return {Promise<Response|error>} - 응답 데이터가 넘어옵니다.
  */
 module.exports.search = (search) => {
 	return new Promise((resolve, reject) => {        

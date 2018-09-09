@@ -11,21 +11,56 @@ MIT
  
 ## Module load
  
+javascript
 ```javascript
 let google = require('google-parser');
 ```
- 
-## callback style
- 
-This module doesn't support `callback`. Please use `promise` or `async/await` pattern instead of it.
- 
-## promise style and async/await style
- 
-This module documented with jsdoc. You can find a detailed description.
- 
+
+typescript
+```typescript
+import * as google from 'google-parser'
+```
+
+## How it works
+
+This module supports only Promise and async / await.
+
+## Function list
+
+```typescript
+google.img(search: string): Promise<ImageResponse>
+
+google.jpg(search: string): Promise<ImageResponse>
+
+google.google(search: string): Promise<serachResponse|error>
+```
+
+## Type
+```typescript
+interface imgReturn {
+	[index: number]: {
+		img: string,
+		url: string
+    }
+}
+	
+interface searchReturn {
+    [index: number]: {
+        title: string,
+        link: string,
+        description: string
+    }
+}
+
+interface error {
+    error: true,
+    reson: string
+}
+```
+
 ## Return
- 
-Recommends testing the json return value to check the json format.
+
+The return is treated as an object. Please refer to the above type.
  
 ## Developer
 볕뉘(small_sunshine)[npmjs](https://www.npmjs.com/~trusty_people) [github](https://github.com/small_sunshines)
