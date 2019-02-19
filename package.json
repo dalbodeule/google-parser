@@ -1,6 +1,6 @@
 {
   "name": "google-parser",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Get images, general search results from Google.",
   "main": "index",
   "scripts": {
