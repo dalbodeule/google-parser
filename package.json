@@ -1,17 +1,19 @@
 {
   "name": "google-parser",
-  "version": "2.0.5",
+  "version": "2.1.0",
   "description": "Get images, general search results from Google.",
-  "main": "index",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "node ./test.js --trace-sync-io"
+    "test": "node ./dist/test.js --trace-sync-io"
   },
   "author": "small_sunshine <jioo0224@naver.com>",
   "license": "MIT",
   "dependencies": {
-    "dom-parser": "^0.1.5",
+    "cheerio": "^1.0.0-rc.3",
     "google": "^2.1.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
   },
   "keywords": [
     "google",
@@ -26,5 +28,10 @@
     "url": "https://git.mori.space/small-sunshine/google-parser/issues"
   },
   "homepage": "https://git.mori.space/small-sunshine/google-parser/#readme",
-  "types": "./types/google-parser.d.ts"
+  "devDependencies": {
+    "@types/cheerio": "^0.22.11",
+    "@types/request-promise": "^4.1.44",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  }
 }
