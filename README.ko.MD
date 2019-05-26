@@ -28,33 +28,30 @@ import * as google from 'google-parser'
 ## 함수목록
 
 ```typescript
-google.img(search: string): Promise<ImageResponse>
+google.img(search: string): Promise<IImg[]>
 
-google.jpg(search: string): Promise<ImageResponse>
+google.jpg(search: string): Promise<IImg[]>
 
-google.google(search: string): Promise<serachResponse|error>
+google.google(search: string): Promise<ISearch[]|ISearchError>
 ```
 
 ## 타입
 ```typescript
-interface imgReturn {
-	[index: number]: {
-		img: string,
-		url: string
-    }
+interface IImg {
+  img: string,
+  url: string,
+  name: string
 }
 	
-interface searchReturn {
-    [index: number]: {
-        title: string,
-        link: string,
-        description: string
-    }
+interface ISearch {
+  title: string,
+  url: string,
+  description: string
 }
 
-interface error {
-    error: true,
-    reson: string
+interface ISearchError {
+  error: true,
+  reson: "antibot"
 }
 ```
 
