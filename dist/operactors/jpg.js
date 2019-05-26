@@ -25,14 +25,15 @@ exports.default = (search) => __awaiter(this, void 0, void 0, function* () {
         const $ = cheerio_1.default.load(data);
         const result = [];
         $("div#search").find(".rg_bx.rg_di").map((i, el) => {
-            const img = $(el).find("img.rg_ic").attr("src");
             const meta = $(el).find("div.rg_meta.notranslate").text();
             const parsedMeta = JSON.parse(meta);
-            result.push({
-                img,
-                url: parsedMeta.ru,
-                name: parsedMeta.pt,
-            });
+            if (parsedMeta.ou.match(/^(?:https?|data:image\/.*;base64)+.*/)) {
+                result.push({
+                    img: parsedMeta.ou,
+                    url: parsedMeta.ru,
+                    name: parsedMeta.pt,
+                });
+            }
         });
         return result;
     }
