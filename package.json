@@ -1,6 +1,6 @@
 {
   "name": "google-parser",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Get images, general search results from Google.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
