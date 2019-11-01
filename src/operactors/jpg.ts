@@ -3,10 +3,16 @@ import request from "request-promise"
 
 import { IImg } from "./img"
 
-export default async (search: string): Promise<IImg[]> => {
+export default async (search: string, safe?: boolean): Promise<IImg[]> => {
   try {
+    let url: string;
+    if (safe) {
+      url = `https://www.google.com/search?q=${encodeURIComponent(search)}&tbm=isch&ie=UTF-8&safe=active`
+    } else {
+      url = `https://www.google.com/search?q=${encodeURIComponent(search)}&tbm=isch&ie=UTF-8`
+    }
     const data = await request({
-      url: `https://www.google.com/search?q=${encodeURIComponent(search)}&tbm=isch&ie=UTF-8&tbs=ift:jpg`,
+      url,
       headers: {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
           "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Whale/1.5.72.4 Safari/537.36",

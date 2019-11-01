@@ -1,7 +1,7 @@
 import * as google from "./index"
 
 (async () => {
-    google.search("kirino")
+    google.search("kirino", true)
         .then((res) => {
             // tslint:disable-next-line: no-console
             console.log(res)
