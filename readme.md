@@ -62,4 +62,4 @@ interface ISearchError {
 The return is treated as an object. Please refer to the above type.
 
 ## Developer
-볕뉘(small_sunshine)[npmjs](https://www.npmjs.com/~trusty_people) [github](https://github.com/small_sunshines)
+달보드레(dalbodeule)[npmjs](https://www.npmjs.com/~trusty_people) [github](https://github.com/dalbodeule)

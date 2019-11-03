@@ -60,4 +60,4 @@ interface ISearchError {
 반환은 object로 처리됩니다. 위의 type을 참조하시기 바랍니다.
 
 ## 제작자
-볕뉘(small_sunshine)[npmjs](https://www.npmjs.com/~trusty_people) [github](https://github.com/small_sunshines)
+달보드레(dalbodeule)[npmjs](https://www.npmjs.com/~trusty_people) [github](https://github.com/dalbodeule)

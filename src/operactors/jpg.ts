@@ -5,7 +5,7 @@ import { IImg } from "./img"
 
 export default async (search: string, safe?: boolean): Promise<IImg[]> => {
   try {
-    let url: string;
+    let url: string
     if (safe) {
       url = `https://www.google.com/search?q=${encodeURIComponent(search)}&tbm=isch&ie=UTF-8&safe=active`
     } else {
